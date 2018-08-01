@@ -19,11 +19,10 @@ class ContactsClient(BaseClient):
     def _get_path(self, subpath):
         return 'contacts/v%s/%s' % (self.options.get('version') or CONTACTS_API_VERSION, subpath)
 
-    def create_a_contact(self, email, data=None, **options):
+    def create_a_contact(self, data=None, **options):
         """ Creates or Updates a client with the supplied data. """
         data = data or {}
-        return self._call('contact/'.
-                          format(email=quote(email.encode('utf-8'))),
+        return self._call('contact/',
                           data=data, method='POST', **options)
 
     def create_or_update_a_contact(self, email, data=None, **options):
