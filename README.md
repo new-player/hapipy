@@ -7,16 +7,15 @@ A python wrapper around HubSpot's APIs. Docs for this wrapper can be found [here
 General API reference documentation can be found [here](https://docs.hubapi.com).
 
 ### Installation
-pip install git+https://github.com/new-player/hapipy.git
+`pip install git+https://github.com/new-player/hapipy.git`
 
 ### Sample Code
+```python
 from hapi.contacts import ContactsClient
 
-~~~~
 api_key = 'Your API Key'
-
 contact_client = ContactsClient(api_key=api_key)
-
+# Preparing data
 data = {}
 data['properties'] = []
 data['properties'].append({
@@ -35,7 +34,7 @@ data['properties'].append({
 	})
 
 contact_client.create_a_contact(data=data)
-~~~~
+```
 
 Reference:
 1. [https://github.com/CBitLabs/hapipy](https://github.com/CBitLabs/hapipy)
