@@ -11,7 +11,8 @@ pip install git+https://github.com/new-player/hapipy.git
 
 ### Sample Code
 from hapi.contacts import ContactsClient
-`
+
+~~~~
 api_key = 'Your API Key'
 
 contact_client = ContactsClient(api_key=api_key)
@@ -34,7 +35,7 @@ data['properties'].append({
 	})
 
 contact_client.create_a_contact(data=data)
-`
+~~~~
 
 Reference:
-[https://github.com/CBitLabs/hapipy](https://github.com/CBitLabs/hapipy)
+1. [https://github.com/CBitLabs/hapipy](https://github.com/CBitLabs/hapipy)
